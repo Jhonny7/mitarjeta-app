@@ -1,0 +1,461 @@
+<olam-header title="{{'home.about' | translate}}" [isModal]="terms"></olam-header>
+
+
+<ion-content>
+
+
+  <div class="containers" >
+
+    <div>
+      <section class="sect" (click)="version = true">Version</section>
+      <section class="sect" (click)="version = false">Aviso legal</section>
+    </div>
+
+    <div class="content animated fadeIn" *ngIf="version">
+      <section class="seccion-img">
+        <img src="assets/imgs/connectandemLogo.png" alt="">
+      </section>
+      <h4>{{name}} <span>{{versionNumber}}</span></h4>
+      <h4>1.2.3</h4>
+      <h5 class="copyright">Copyright © {{date}} ConnecTandem</h5>
+    </div>
+
+    <div class="footer" *ngIf="version">
+      <img src="assets/imgs/connectandemLogo.png">
+    </div>
+
+    <div class="content animated fadeIn" *ngIf="!version">
+      <p><strong>AVISO LEGAL</strong></p>
+      
+      <p><strong>INFORMACI&Oacute;N GENERAL</strong></p>
+      
+      <p>En cumplimiento de lo dispuesto en el art&iacute;culo 10 de la Ley 34/2002 de Servicios de la Sociedad de la
+        Informaci&oacute;n (LSSICE), informamos al usuario que la app &ldquo;ConnecTandem&rdquo; es una
+        aplicaci&oacute;n m&oacute;vil (app) desarrollada por el Instituto Universitario de Investigaci&oacute;n en
+        Estudios Norteamericanos &ldquo;Benjamin Franklin&rdquo; de la Universidad de Alcal&aacute;, y de la que es
+        titular, con los siguientes datos registrales y de contacto:</p>
+      
+      <p><strong>INSTITUTO UNIVERSITARIO DE INVESTIGACI&Oacute;N EN ESTUDIOS&nbsp;NORTEAMERICANOS&nbsp;&ldquo;BENJAMIN
+          FRANKLIN&rdquo; DE&nbsp;LA&nbsp;UNIVERSIDAD&nbsp;DE&nbsp;ALCAL&Aacute;</strong></p>
+      <p>C.I.F.: Q2801770E</p>
+      <p>Tel&eacute;fono: 91 887 52 52</p>
+      <p>Correo electr&oacute;nico: <u><a href="mailto:info@institutofranklin.net">info@institutofranklin.net</a></u>
+      </p>
+      <p>P&aacute;gina web: <u><a href="https://institutofranklin.net/">https://institutofranklin.net/</a></u></p>
+      
+      
+      <p><strong>CONDICIONES DE USO</strong></p>
+      
+      <p>INSTITUTO FRANKLIN-UAH cumple con los requisitos establecidos en la Ley 34/2002, de 11 de julio, de Servicios
+        de la Sociedad de la Informaci&oacute;n y Comercio Electr&oacute;nico, en la Ley Org&aacute;nica 3/2018, de 5 de
+        diciembre, de Protecci&oacute;n de Datos Personales y garant&iacute;a de los derechos digitales, el Reglamento
+        UE 679/2016 (RGPD) dem&aacute;s directivas europeas y normativa concordante y a tal fin ha creado el siguiente
+        Aviso Legal.</p>
+      
+      <p>INSTITUTO FRANKLIN-UAH le informa de que la utilizaci&oacute;n del portal, incluyendo el mero acceso, le
+        atribuye la condici&oacute;n de Usuario. En ese sentido el Usuario se compromete a utilizar el portal de
+        conformidad con la ley, el presente Aviso legal, reglamentos e instrucciones puestos en su conocimiento,
+        as&iacute; como la moral, las buenas costumbres generalmente aceptadas y el orden p&uacute;blico. Si el usuario
+        no estuviera de acuerdo con cualquiera de las condiciones aqu&iacute; establecidas, no deber&aacute;
+        usar/acceder a este portal.</p>
+      
+      
+      <p><strong>PROPIEDAD INTELECTUAL E INDUSTRIAL</strong></p>
+      
+      <p>Mediante el presente Aviso Legal no se cede ning&uacute;n derecho de propiedad intelectual o industrial sobre
+        el sitio web ni sobre ninguno de sus elementos integrantes.</p>
+      
+      <p>Todos los Contenidos del presente portal, entendiendo por estos a t&iacute;tulo meramente enunciativo los
+        textos, fotograf&iacute;as, gr&aacute;ficos, im&aacute;genes, iconos, tecnolog&iacute;a, software, links y
+        dem&aacute;s contenidos audiovisuales o sonoros, as&iacute; como su dise&ntilde;o gr&aacute;fico y
+        c&oacute;digos fuente, y los derechos de propiedad intelectual que pudieran corresponder a dichos contenidos,
+        as&iacute; como todas las marcas, nombres comerciales o cualquier otro signo distintivo, son propiedad del
+        INSTITUTO FRANKLIN-UAH, o de sus leg&iacute;timos propietarios, quedando reservados todos los derechos sobre los
+        mismos y sin que puedan entenderse cedidos al Usuario ninguno de los derechos de explotaci&oacute;n sobre los
+        mismos, m&aacute;s all&aacute; de lo estrictamente necesario para el correcto uso del Portal; se encuentran por
+        tanto protegidos por la normativa de Propiedad Intelectual e Industrial, en particular por el R.D.L 1/96 que
+        aprueba el Texto Refundido de la Ley de Propiedad Intelectual y por la Ley de Marcas 17/2001.</p>
+      
+      <p>Queda prohibido al Usuario cualquier acto de reproducci&oacute;n, transformaci&oacute;n, distribuci&oacute;n,
+        comunicaci&oacute;n p&uacute;blica, puesta a disposici&oacute;n, extracci&oacute;n, reutilizaci&oacute;n,
+        reenv&iacute;o o la utilizaci&oacute;n de cualquier naturaleza, por cualquier medio o procedimiento, de
+        cualquiera de los Contenidos, salvo en los casos en que est&eacute; legalmente permitido o sea autorizado por
+        escrito por el titular de los correspondientes derechos.</p>
+      
+      <p>INSTITUTO FRANKLIN-UAH no ser&aacute; responsable de los da&ntilde;os o perjuicios que pudieran derivarse de la
+        utilizaci&oacute;n de los Contenidos por parte de los usuarios o de la infracci&oacute;n por parte de
+        &eacute;stos de cualquier disposici&oacute;n legal vigente.</p>
+      
+      
+      <p><strong>CONTENIDOS</strong></p>
+      
+      <p>INSTITUTO FRANKLIN-UAH se reserva el derecho de efectuar sin previo aviso las modificaciones que considere
+        oportunas en el portal, pudiendo cambiar, suprimir o a&ntilde;adir tanto los contenidos y servicios que presta
+        como la forma en la que &eacute;stos aparezcan presentados o localizados.</p>
+      
+      <p>El Usuario del portal se compromete a hacer un uso correcto del Portal y sus Contenidos de conformidad con la
+        Ley y el presente Aviso Legal, y a no emplearlos para incurrir en actividades il&iacute;citas o contrarias a la
+        buena fe y al ordenamiento legal, y a no provocar da&ntilde;os en los sistemas f&iacute;sicos y l&oacute;gicos
+        de INSTITUTO FRANKLIN-UAH de sus proveedores o de terceras personas.</p>
+      
+      <p>El Usuario responder&aacute; frente a INSTITUTO FRANKLIN-UAH o frente a terceros, de cualesquiera da&ntilde;os
+        y perjuicios que pudieran causarse como consecuencia del incumplimiento de dicha obligaci&oacute;n.</p>
+      
+      <p><strong>EXCLUSI&Oacute;N DE GARANT&Iacute;AS Y RESPONSABILIDAD</strong></p>
+      
+      <p>1.- CONTINUIDAD DE LOS SERVICIOS</p>
+      
+      <p>El acceso al Portal requiere de servicios y suministros de terceros, incluidos el transporte a trav&eacute;s de
+        redes de telecomunicaciones cuya fiabilidad, calidad, continuidad y funcionamiento no corresponde INSTITUTO
+        FRANKLIN-UAH.</p>
+      
+      <p>Por ello, INSTITUTO FRANKLIN-UAH no garantiza la disponibilidad y continuidad del funcionamiento del Portal,
+        los Servicios y/o los Contenidos, no asumiendo ning&uacute;n tipo de responsabilidad por los da&ntilde;os y
+        perjuicios de toda naturaleza que puedan deberse a la falta de dicha disponibilidad o de continuidad.</p>
+      
+      <p>2.- SEGURIDAD DEL PORTAL</p>
+      
+      <p>INSTITUTO FRANKLIN-UAH adopta las medidas de seguridad razonablemente adecuadas, pero no puede garantizar la
+        invulnerabilidad absoluta de los sistemas de seguridad del Portal y de los Servicios, ni puede garantizar la
+        seguridad o inviolabilidad de dichos datos en su transmisi&oacute;n a trav&eacute;s de la red; el Usuario debe
+        ser consciente de que las medidas de seguridad de los sistemas inform&aacute;ticos en Internet no son
+        enteramente fiables.</p>
+      
+      <p>Se excluye, por tanto, toda responsabilidad por los da&ntilde;os y perjuicios de todo tipo que pudieran deberse
+        al conocimiento que pudieran tener terceros no autorizados de la clase, condiciones, caracter&iacute;sticas y
+        circunstancias de los usuarios del Portal, los Servicios y/o los Contenidos.</p>
+      
+      <p>INSTITUTO FRANKLIN-UAH no controla ni garantiza la ausencia de virus, gusanos, ni de otros elementos en los
+        Contenidos que puedan producir alteraciones en su sistema inform&aacute;tico (hardware y software) o en los
+        documentos electr&oacute;nicos y ficheros almacenados en su sistema inform&aacute;tico. Corresponde al Usuario,
+        en todo caso, la disponibilidad de herramientas adecuadas para la detecci&oacute;n y desinfecci&oacute;n de
+        programas inform&aacute;ticos da&ntilde;inos.</p>
+      
+      <p>INSTITUTO FRANKLIN-UAH excluye toda responsabilidad por los da&ntilde;os y perjuicios de todo tipo que puedan
+        deberse a la presencia de estos virus o elementos lesivos en los Contenidos.</p>
+      
+      <p>3.- EMPLEO POR EL USUARIO</p>
+      
+      <p>INSTITUTO FRANKLIN-UAH no controla la utilizaci&oacute;n que los usuarios hacen del Portal, los Servicios y/o
+        los Contenidos, por lo que no garantiza que el uso por parte de los mismos se haga conforme a la ley y a las
+        presentes condiciones generales. INSTITUTO FRANKLIN-UAH excluye cualquier responsabilidad por los da&ntilde;os y
+        perjuicios de todo tipo que puedan deberse a la utilizaci&oacute;n del Portal, los Servicios y los Contenidos
+        por parte de los usuarios.</p>
+      
+      <p>4.- PROTECCI&Oacute;N DE DATOS</p>
+      
+      <p>INSTITUTO FRANKLIN-UAH se compromete a adoptar una pol&iacute;tica de confidencialidad y Protecci&oacute;n de
+        Datos, con el objeto de proteger la privacidad de la informaci&oacute;n personal obtenida a trav&eacute;s de su
+        Portal y de conformidad con lo establecido en la normativa vigente relativa a la Protecci&oacute;n de Datos de
+        Car&aacute;cter Personal (Ley 34/2002 de Servicios de la Sociedad de la Informaci&oacute;n (LSSI), Ley
+        Org&aacute;nica 3/2018, de 5 de diciembre, de Protecci&oacute;n de Datos Personales y garant&iacute;a de los
+        derechos digitales, Reglamento UE 679/2016 (RGPD), dem&aacute;s directivas europeas, normativa concordante y
+        resto de normas de desarrollo.</p>
+      
+      <p>No obstante, INSTITUTO FRANKLIN-UAH se reserva el derecho de modificar las Normas de Confidencialidad y
+        Protecci&oacute;n de Datos que a continuaci&oacute;n se detallan a fin de adaptarlas a novedades legislativas,
+        jurisprudenciales, t&eacute;cnicas o todas aquellas que le permitan ofrecer mejores servicios y contenidos, con
+        lo cual se aconseja revisar estas normas peri&oacute;dicamente. En dichos supuestos INSTITUTO FRANKLIN-UAH
+        anunciar&aacute; en esta p&aacute;gina los cambios introducidos con razonable antelaci&oacute;n a su puesta en
+        pr&aacute;ctica.</p>
+      
+      <p>Est&aacute; bajo las normas de Confidencialidad y Protecci&oacute;n de Datos toda aquella informaci&oacute;n
+        personal que el usuario inscribe libre y voluntariamente a la red de INSTITUTO FRANKLIN-UAH as&iacute; como
+        aquella que obligatoriamente debe inscribir para la consulta correspondiente.</p>
+      
+      <p>Los usuarios que faciliten datos de car&aacute;cter personal, consienten inequ&iacute;vocamente la
+        incorporaci&oacute;n de sus datos a los ficheros de los que es responsable INSTITUTO FRANKLIN-UAH y que se
+        encuentran debidamente inscritos en el Registro General de la Agencia Espa&ntilde;ola de Protecci&oacute;n de
+        Datos y/o en su Registro de Actividades del Tratamiento, as&iacute; como el tratamiento informatizado o no de
+        los mismos con el fin de que puedan ser utilizados por INSTITUTO FRANKLIN-UAH para el cumplimiento de sus fines
+        estatutarios, el mantenimiento de la relaci&oacute;n establecida -gesti&oacute;n, administraci&oacute;n, mejora
+        y adecuaci&oacute;n a preferencias y gustos del usuario-, y/o consultas solicitadas por el usuario, el
+        env&iacute;o, por medios tradicionales y/o electr&oacute;nicos, de informaci&oacute;n directamente relacionada
+        siempre que el usuario lo haya consentido as&iacute; como especialmente para el uso del manual de instrucciones
+        de seguridad del operador y la trazabilidad de la entrega del manual.</p>
+      <p>Al aceptar a pol&iacute;tica de privacidad usted consiente en recibir informaci&oacute;n de las actualizaciones
+        legales del manual y otras actividades de INSTITUTO FRANKLIN-UAH o informaci&oacute;n de INSTITUTO FRANKLIN-UAH.
+      </p>
+      
+      <p>Respecto al correo electr&oacute;nico, INSTITUTO FRANKLIN-UAH &uacute;nicamente remitir&aacute; comunicaciones
+        que el usuario haya autorizado recibir. En los supuestos de dichos env&iacute;os y si no desea recibir estos
+        mensajes por correo electr&oacute;nico, INSTITUTO FRANKLIN-UAH le ofrecer&aacute; siempre un mecanismo
+        f&aacute;cil y sencillo para indic&aacute;rnoslo as&iacute;.</p>
+      
+      <p>Esta entidad tratar&aacute; los datos de forma confidencial y cancelar&aacute;, borrar&aacute; y/o
+        bloquear&aacute; los datos cuando resulten inexactos, incompletos o hayan dejado de ser necesarios o pertinentes
+        para su finalidad, de conformidad con lo previsto en la legislaci&oacute;n en materia de protecci&oacute;n de
+        datos.</p>
+      
+      <p>Toda la informaci&oacute;n que facilite el Usuario a trav&eacute;s del Portal deber&aacute; ser veraz. A estos
+        efectos, el Usuario garantiza la autenticidad de todos aquellos datos que comunique y mantendr&aacute; la
+        informaci&oacute;n facilitada a INSTITUTO FRANKLIN-UAH perfectamente actualizada de forma que responda, en todo
+        momento, a la situaci&oacute;n real del Usuario. En todo caso ser&aacute; el Usuario el &uacute;nico responsable
+        de las manifestaciones falsas o inexactas que realice y de los perjuicios que cause a INSTITUTO FRANKLIN-UAH o a
+        terceros por la informaci&oacute;n que facilite.</p>
+      
+      <p>INSTITUTO FRANKLIN-UAH se compromete al cumplimiento de su obligaci&oacute;n de secreto de los datos de
+        car&aacute;cter personal y de su deber de guardarlos de acuerdo con lo establecido por la Ley Org&aacute;nica
+        3/2018, de 5 de diciembre, de Protecci&oacute;n de Datos Personales y garant&iacute;a de los derechos digitales.
+        En este sentido INSTITUTO FRANKLIN-UAH ha adoptado las medidas t&eacute;cnicas y organizativas para lograr los
+        niveles de seguridad de protecci&oacute;n de los Datos Personales legalmente requeridos, todo ello de cara a
+        evitar la p&eacute;rdida, mal uso, alteraci&oacute;n, acceso no autorizado y robo de los Datos Personales
+        facilitados.</p>
+      
+      <p>Sin embargo, el usuario debe ser consciente de que en la actualidad las medidas de seguridad en Internet no son
+        inexpugnables y por lo tanto no se est&aacute; a salvo de posibles intromisiones ilegales e indebidas, que no
+        ser&iacute;an responsabilidad de INSTITUTO FRANKLIN-UAH ya que ha actuado con la diligencia debida para proteger
+        los datos conforme determina la ley.</p>
+      
+      <p>INSTITUTO FRANKLIN-UAH no ceder&aacute; sin autorizaci&oacute;n expresa, los datos de car&aacute;cter personal
+        recabados a terceros, salvo el acceso que, para una adecuada prestaci&oacute;n de los servicios del portal o la
+        prestaci&oacute;n de servicios solicitados, pudieran tener los profesionales correspondientes. Dicho acceso se
+        ajustar&aacute; en todo lo momento a la Pol&iacute;tica de Protecci&oacute;n de Datos y a la normativa vigente
+        en materia de Protecci&oacute;n de Datos Personales.</p>
+      
+      <p>El presente Portal puede contener enlaces o referencias a otros sitios web que no est&aacute;n bajo nuestro
+        control y en los que, por lo tanto, no es aplicable la presente Pol&iacute;tica de Protecci&oacute;n de Datos.
+        Le aconsejamos leer las indicaciones que al respecto contenga cada p&aacute;gina web que visite. El usuario
+        ser&aacute; el &uacute;nico responsable de sus conexiones con tales p&aacute;ginas.</p>
+      
+      <p>El usuario queda informado de que, en su caso, cuando se recaben datos de car&aacute;cter personal por medio de
+        la p&aacute;gina web, estos quedar&aacute;n incorporados a un fichero automatizado del que es titular el
+        INSTITUTO UNIVERSITARIO DE INVESTIGACI&Oacute;N EN ESTUDIOS NORTEAMERICANOS &ldquo;BENJAMIN FRANKLIN&rdquo; DE
+        LA UNIVERSIDAD DE ALCAL&Aacute;, con domicilio de notificaciones sito en C/ Trinidad, 1. 28801. Alcal&aacute; de
+        Henares, y de que tiene los derechos de acceso, rectificaci&oacute;n, supresi&oacute;n (derecho al olvido),
+        oposici&oacute;n, de portabilidad de datos, y de limitaci&oacute;n del tratamiento, que podr&aacute; ejercitar
+        en cualquier momento dirigiendo un mensaje de correo electr&oacute;nico a la direcci&oacute;n <u><a
+            href="mailto:info@institutofranklin.net">info@institutofranklin.net</a></u> incluyendo en el asunto la
+        palabra &ldquo;BAJA&rdquo; o, por escrito, al domicilio de notificaciones de INSTITUTO FRANKLIN-UAH
+        acompa&ntilde;ando fotocopia de su Documento Nacional de Identidad o documento legal de identificaci&oacute;n y
+        cumpliendo los requisitos contemplados, tanto en el Reglamento General de Protecci&oacute;n de Datos (Reg. UE
+        2016/679), como en la Ley Org&aacute;nica 3/2018, de 5 de diciembre, de Protecci&oacute;n de Datos Personales y
+        garant&iacute;a de los derechos digitales.</p>
+      
+      <p>Asimismo, el usuario otorga el consentimiento para que INSTITUTO FRANKLIN-UAH pueda someter a tratamiento los
+        referidos datos de car&aacute;cter personal, con el fin de enviarle informaciones relativas a los servicios y
+        actividades de INSTITUTO FRANKLIN-UAH. En los casos en que el usuario de la web se registre en la app
+        &ldquo;ConnecTandem&rdquo; el usuario consiente expresamente la cesi&oacute;n de sus datos personales a la
+        empresa titular. Y en caso de siniestro los datos podr&aacute;n cederse a la Autoridad laboral, as&iacute; como
+        a los Juzgados o Tribunales, a las Fuerzas de Seguridad del Estado, as&iacute; como a la compa&ntilde;&iacute;a
+        de seguros interviniente.</p>
+      
+      <p>Si el usuario no quisiera otorgar este consentimiento, o revocarlo en cualquier momento, puede enviar un
+        escrito al domicilio de notificaciones indicado de INSTITUTO FRANKLIN-UAH C/ Trinidad, 1. 28801. Alcal&aacute;
+        de Henares o bien al correo electr&oacute;nico <u><a
+            href="mailto:info@institutofranklin.net">info@institutofranklin.net</a></u></p>
+      
+      <p>5.- LEGISLACI&Oacute;N APLICABLE</p>
+      
+      <p>El presente Aviso Legal se rige en todos y cada uno de sus extremos por la Ley Espa&ntilde;ola, renunciando
+        expresamente las partes al fuero que les corresponda, y someti&eacute;ndose a los Juzgados y Tribunales de
+        Madrid.</p>
+      
+      
+      <p><strong>LEGAL NOTICE&nbsp;</strong></p>
+      
+      <p><strong>GENERAL INFORMATION&nbsp;</strong></p>
+      
+      <p>In compliance with the provisions of Article 10 of Law 34/2002 of Services of the Information Society (LSSICE),
+        we inform the user that the app &quot;ConnecTandem&quot; is a mobile application (app) developed by the
+        University Institute for Research in American Studies &quot;Benjamin Franklin&quot; of the University of
+        Alcal&aacute;, and of which it is the owner, with the following registration and contact details:</p>
+      
+      <p>UNIVERSITY INSTITUTE FOR RESEARCH IN NORTH AMERICAN STUDIES &quot;BENJAMIN FRANKLIN&quot; OF THE UNIVERSITY OF
+        ALCAL&Aacute;.</p>
+      
+      <p>C.I.F.: Q2801770E</p>
+      
+      <p>Telephone: 91 887 52 52</p>
+      
+      <p>E-mail: info@institutofranklin.net</p>
+      
+      <p>Website: https://institutofranklin.net/</p>
+      
+      
+      
+      <p><strong>TERMS OF USE&nbsp;</strong></p>
+      
+      <p>INSTITUTO FRANKLIN-UAH complies with the requirements established in the Law 34/2002, of July 11, of Services
+        of the Information Society and Electronic Commerce, in the Organic Law 3/2018, of December 5, of Personal Data
+        Protection and guarantee of digital rights, the EU Regulation 679/2016 (RGPD) other European directives and
+        concordant regulations and to this end has created the following Legal Notice.</p>
+      
+      <p>INSTITUTO FRANKLIN-UAH informs you that the use of the portal, including mere access, gives you the status of
+        User. In that sense the User agrees to use the portal in accordance with the law, this Legal Notice, regulations
+        and instructions made known to him, as well as morality, generally accepted good customs and public order. If
+        the user does not agree with any of the conditions set forth herein, he/she must not use/access this portal.</p>
+      
+      
+      
+      <p><strong>INTELLECTUAL AND INDUSTRIAL PROPERTY&nbsp;</strong></p>
+      
+      <p>By means of this Legal Notice, no intellectual or industrial property rights are granted over the website or
+        over any of its constituent elements.</p>
+      
+      <p>All the Contents of this portal, understood to include but not limited to texts, photographs, graphics, images,
+        icons, technology, software, links and other audiovisual or sound contents, as well as its graphic design and
+        source codes, and the intellectual property rights that may correspond to such contents, as well as all
+        trademarks, trade names or any other distinctive sign, are the property of INSTITUTO FRANKLIN-UAH, or their
+        rightful owners, being reserved all rights over them and without being transferred to the user any of the rights
+        of exploitation thereof, beyond what is strictly necessary for the proper use of the Portal; they are therefore
+        protected by the regulations of Intellectual and Industrial Property, in particular by the R. D.L 1/96 that
+        approves the Revised Text of the Law of Intellectual Property and by the Law of Marks 17/2001.</p>
+      
+      <p>It is forbidden to the User any act of reproduction, transformation, distribution, public communication, making
+        available, extraction, reuse, forwarding or use of any nature, by any means or process, of any of the Contents,
+        except in cases where it is legally permitted or authorized in writing by the owner of the corresponding rights.
+      </p>
+      
+      <p>INSTITUTO FRANKLIN-UAH shall not be liable for any damages that may arise from the use of the Content by users
+        or the infringement by them of any legal provision in force.</p>
+      
+      
+      
+      <p><strong>CONTENTS&nbsp;</strong></p>
+      
+      <p>INSTITUTO FRANKLIN-UAH reserves the right to make unannounced changes it deems appropriate in the portal, may
+        change, delete or add content and services it provides and the way in which they are presented or located.</p>
+      
+      <p>The User of the portal agrees to make proper use of the Portal and its contents in accordance with the Law and
+        this Legal Notice, and not to use them to engage in illegal activities or contrary to good faith and legal
+        order, and not to cause damage to the physical and logical systems of INSTITUTO FRANKLIN-UAH of its suppliers or
+        third parties.</p>
+      
+      <p>The User will be liable to INSTITUTO FRANKLIN-UAH or third parties for any damages that may be caused as a
+        result of a breach of this obligation.</p>
+      
+      <p><strong>EXCLUSION OF WARRANTIES AND LIABILITY&nbsp;</strong></p>
+      
+      <p><strong>1.- CONTINUITY OF SERVICES&nbsp;</strong></p>
+      
+      <p>Access to the Portal requires services and supplies from third parties, including transport through
+        telecommunications networks whose reliability, quality, continuity and operation does not correspond INSTITUTO
+        FRANKLIN-UAH.</p>
+      
+      <p>Therefore, INSTITUTO FRANKLIN-UAH does not guarantee the availability and continuity of the operation of the
+        Portal, the Services and/or the Contents, not assuming any liability for damages of any kind that may be due to
+        the lack of such availability or continuity.</p>
+      
+      <p><strong>2.- PORTAL SECURITY&nbsp;</strong></p>
+      
+      <p>INSTITUTO FRANKLIN-UAH adopts reasonably adequate security measures, but cannot guarantee the absolute
+        invulnerability of the security systems of the Portal and the Services, nor can it guarantee the security or
+        inviolability of such data in its transmission through the network; the User must be aware that the security
+        measures of computer systems on the Internet are not entirely reliable.</p>
+      
+      <p>It is excluded, therefore, any liability for damages of any kind that may be due to the knowledge that
+        unauthorized third parties may have of the type, conditions, characteristics and circumstances of the users of
+        the Portal, the Services and/or the Contents.</p>
+      
+      <p>INSTITUTO FRANKLIN-UAH does not control or guarantee the absence of viruses, worms, or other elements in the
+        Content that may cause alterations in your computer system (hardware and software) or electronic documents and
+        files stored on your computer system. It is up to the User, in any case, the availability of adequate tools for
+        the detection and disinfection of harmful computer programs.</p>
+      
+      <p>INSTITUTO FRANKLIN-UAH excludes all liability for damages of any kind that may be due to the presence of these
+        viruses or harmful elements in the Content.</p>
+      
+      <p><strong>3.- USE BY THE USER&nbsp;</strong></p>
+      
+      <p>INSTITUTO FRANKLIN-UAH does not control the use that users make of the Portal, Services and / or Content, so it
+        does not guarantee that the use by them is in accordance with the law and these general conditions. INSTITUTO
+        FRANKLIN-UAH excludes any liability for damages of any kind that may result from the use of the Portal, Services
+        and Content by users.</p>
+      
+      <p><strong>4.- DATA PROTECTION&nbsp;</strong></p>
+      
+      <p>INSTITUTO FRANKLIN-UAH is committed to adopting a policy of confidentiality and Data Protection, in order to
+        protect the privacy of personal information obtained through its Portal and in accordance with the provisions of
+        current legislation on the Protection of Personal Data (Law 34/2002 of Services of the Information Society
+        (LSSI), Organic Law 3/2018, of December 5, on Personal Data Protection and guarantee of digital rights, EU
+        Regulation 679/2016 (RGPD), other European directives, concordant regulations and other development regulations.
+      </p>
+      
+      <p>However, INSTITUTO FRANKLIN-UAH reserves the right to modify the Rules of Confidentiality and Data Protection
+        detailed below in order to adapt them to legislative, jurisprudential, technical or all those that allow it to
+        offer better services and content, with which it is advisable to review these rules periodically. In such cases
+        INSTITUTO FRANKLIN-UAH will announce on this page the changes introduced with reasonable notice before their
+        implementation.</p>
+      
+      <p>It is under the rules of Confidentiality and Data Protection all personal information that the user enters
+        freely and voluntarily to the network of INSTITUTO FRANKLIN-UAH as well as that which must be compulsorily
+        registered for the corresponding consultation.</p>
+      
+      <p>Users who provide personal data, unequivocally consent to the incorporation of their data to the files for
+        which INSTITUTO FRANKLIN-UAH is responsible and which are duly registered in the General Register of the Spanish
+        Agency for Data Protection and / or in its Register of Processing Activities, as well as the computerized
+        treatment or not of the same so that they can be used by INSTITUTO FRANKLIN-UAH for the fulfillment of its
+        statutory purposes, the maintenance of the established relationship -management, administration, improvement and
+        adaptation to the preferences and tastes of the user-, and/or consultations requested by the user, the sending,
+        by traditional and/or electronic means, of directly related information as long as the user has consented to it
+        as well as especially for the use of the operator&apos;s safety instruction manual and the traceability of the
+        delivery of the manual.</p>
+      
+      <p>By accepting the privacy policy you consent to receive information about legal updates of the manual and other
+        activities of INSTITUTO FRANKLIN-UAH or information from INSTITUTO FRANKLIN-UAH.</p>
+      
+      <p>Regarding e-mail, INSTITUTO FRANKLIN-UAH will only send communications that the user has authorized to receive.
+        In the cases of such shipments and if you do not wish to receive these messages by email, INSTITUTO FRANKLIN-UAH
+        will always offer an easy and simple mechanism to indicate so.</p>
+      
+      <p>This entity will treat the data confidentially and will cancel, delete and / or block the data when they are
+        inaccurate, incomplete or no longer necessary or relevant for its purpose, in accordance with the provisions of
+        the legislation on data protection.</p>
+      
+      <p>All information provided by the User through the Portal must be truthful. To this end, the User guarantees the
+        authenticity of all data communicated and will keep the information provided to INSTITUTO FRANKLIN-UAH perfectly
+        updated so that it responds, at all times, to the real situation of the User. In any case, the User will be
+        solely responsible for any false or inaccurate statements made and the damages caused to INSTITUTO FRANKLIN-UAH
+        or third parties for the information provided.</p>
+      
+      <p>INSTITUTO FRANKLIN-UAH undertakes to comply with its obligation of secrecy of personal data and its duty to
+        keep them in accordance with the provisions of the Organic Law 3/2018, of December 5, on the Protection of
+        Personal Data and guarantee of digital rights. In this sense INSTITUTO FRANKLIN-UAH has adopted the technical
+        and organizational measures to achieve the security levels of protection of Personal Data legally required, all
+        in order to prevent the loss, misuse, alteration, unauthorized access and theft of Personal Data provided.</p>
+      
+      <p>However, the user should be aware that at present the security measures on the Internet are not impregnable and
+        therefore is not safe from possible illegal and improper intrusions, which would not be the responsibility of
+        INSTITUTO FRANKLIN-UAH as it has acted with due diligence to protect the data as determined by law.</p>
+      
+      <p>INSTITUTO FRANKLIN-UAH will not transfer without express authorization, the personal data collected to third
+        parties, except for access that, for the proper provision of portal services or the provision of services
+        requested, may have the corresponding professionals. Such access shall at all times comply with the Data
+        Protection Policy and the regulations in force on Personal Data Protection.</p>
+      
+      <p>This Portal may contain links or references to other websites that are not under our control and in which,
+        therefore, this Data Protection Policy is not applicable. We advise you to read the indications contained in
+        this regard on each web page you visit. The user will be solely responsible for their connections with such
+        pages.</p>
+      
+      <p>The user is informed that, when personal data is collected through the web page, it will be incorporated to an
+        automated file owned by the INSTITUTO UNIVERSITARIO DE INVESTIGACI&Oacute;N EN ESTUDIOS NORTEAMERICANOS
+        &quot;BENJAMIN FRANKLIN&quot; DE LA UNIVERSIDAD DE ALCAL&Aacute;, with address for notifications located at C/
+        Trinidad, 1. 28801. Alcal&aacute; de Henares, and that you have the rights of access, rectification, deletion
+        (right to be forgotten), opposition, data portability, and limitation of treatment, which may be exercised at
+        any time by sending an email to the address info@institutofranklin.net including the word &quot;BAJA&quot; in
+        the subject or, in writing, to the address for notifications of INSTITUTO FRANKLIN-UAH accompanying a photocopy
+        of your National Identity Card or legal document of identification and fulfilling the requirements set out in
+        both the General Data Protection Regulation (Reg. EU 2016/679), as well as in the Organic Law 3/2018, of
+        December 5, on Personal Data Protection and guarantee of digital rights.</p>
+      
+      <p>Likewise, the user grants consent so that INSTITUTO FRANKLIN-UAH can submit the referred personal data to
+        treatment, in order to send him/her information related to the services and activities of INSTITUTO
+        FRANKLIN-UAH. In cases where the web user registers in the app &quot;ConnecTandem&quot; the user expressly
+        consents to the transfer of their personal data to the owner company. And in the event of an accident, the data
+        may be transferred to the labor authorities, as well as to the Courts or Tribunals, to the State Security
+        Forces, as well as to the insurance company involved.</p>
+      
+      <p>If the user does not wish to grant this consent, or revoke it at any time, he/she can send a letter to the
+        indicated address of INSTITUTO FRANKLIN-UAH C/ Trinidad, 1. 28801. Alcal&aacute; de Henares or to the e-mail
+        info@institutofranklin.net</p>
+      
+      <p><strong>5.- APPLICABLE LEGISLATION&nbsp;</strong></p>
+      
+      <p>This Legal Notice is governed in each and every one of its aspects by Spanish Law, the parties expressly
+        waiving any other jurisdiction that may correspond to them, and submitting to the Courts and Tribunals of
+        Madrid.</p>
+    </div>
+  </div>
+</ion-content>

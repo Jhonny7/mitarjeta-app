@@ -1,0 +1,158 @@
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+  <mat-drawer #drawer class="example-sidenav" mode="side" opened="true">
+    <section class="menu">
+      Menú
+    </section>
+
+    <section class="menus">
+      <div *ngFor="let menu of menus" (click)="open(menu)" class="menu-interno">
+        <span class="material-icons-outlined">
+          {{menu.icon}}
+        </span>
+        {{menu.title}}
+      </div>
+
+      <div (click)="logout()" class="menu-interno">
+        <span class="material-icons-outlined">
+          logout
+        </span>
+        Salir
+      </div>
+    </section>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <section class="sidenav-content">
+      <section class="header-admon">
+        <button type="button" mat-button (click)="drawer.toggle()" class="visual-menu">
+          <span class="material-icons">
+            list
+          </span>
+        </button>
+
+        <p>Administración</p>
+      </section>
+
+      <section [ngSwitch]="menuActivo" class="switch">
+        <section *ngSwitchCase="1">
+          <table>
+            <caption>Universidades</caption>
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Email</th>
+                <th scope="col">Imagen</th>
+                <th scope="col"></th>
+
+              </tr>
+            </thead>
+
+            <tbody *ngIf="universidades && universidades.length > 0">
+
+              <tr *ngFor="let universidad of universidades">
+                <td data-label="Nombre">{{ universidad.descripcion }}</td>
+
+                <td data-label="Correo">{{ universidad.nombre }}</td>
+
+                <td data-label="Imagen">
+                  <img [src]=" universidad.url" alt="" *ngIf="universidad.url">
+                </td>
+
+                <td data-label="Editar" style="cursor: pointer;" (click)="edit(universidad)">
+                  <span class="material-icons-outlined">
+                    build
+                  </span>
+                </td>
+
+                <td data-label="Eliminar" style="cursor: pointer;" (click)="delete(universidad, universidad.label)">
+                  <span class="material-icons-outlined">
+                    delete
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div *ngIf="!universidades || universidades.length == 0" style="text-align: center;padding: 10px;">
+            Sin registros disponibles
+          </div>
+        </section>
+        <section *ngSwitchCase="2">
+          <table>
+            <caption>Roles</caption>
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+                <th scope="col"></th>
+
+              </tr>
+            </thead>
+
+            <tbody *ngIf="roles && roles.length > 0">
+
+              <tr *ngFor="let rol of roles">
+                <td data-label="Nombre">{{ rol.nombre }}</td>
+
+                <td data-label="Descripción">{{ rol.descripcion }}</td>
+
+                <td data-label="Editar" style="cursor: pointer;" (click)="edit(rol)">
+                  <span class="material-icons-outlined">
+                    build
+                  </span>
+                </td>
+
+                <td data-label="Eliminar" style="cursor: pointer;" (click)="delete(rol, rol.label)">
+                  <span class="material-icons-outlined">
+                    delete
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div *ngIf="!roles || roles.length == 0" style="text-align: center;padding: 10px;">
+            Sin registros disponibles
+          </div>
+        </section>
+        <section *ngSwitchCase="3">
+          <table>
+            <caption>Usuarios penalizados</caption>
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Usuario</th>
+                <th scope="col"></th>
+
+              </tr>
+            </thead>
+
+            <tbody *ngIf="users && users.length > 0">
+
+              <tr *ngFor="let user of users">
+                <td data-label="Nombre">{{ user.nombre }} {{ user.apellidos }}</td>
+
+                <td data-label="Descripción">{{ user.username }}</td>
+
+                <td data-label="Editar" style="cursor: pointer;" (click)="edit(user)">
+                  <span class="material-icons-outlined">
+                    build
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div *ngIf="!users || users.length == 0" style="text-align: center;padding: 10px;">
+            Sin registros disponibles
+          </div>
+        </section>
+        <div class="add" *ngIf="menuActivo!=3">
+          <button (click)="create()">
+            <span class="material-icons-outlined">
+              add
+            </span>
+          </button>
+        </div>
+      </section>
+    </section>
+  </mat-drawer-content>
+
+</mat-drawer-container>

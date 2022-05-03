@@ -1,0 +1,121 @@
+<section class="product-create">
+    <div class="close-exit" (click)="onConfirmClick()">
+        <i class="material-icons">clear</i>
+    </div>
+
+    <section [ngSwitch]="data.id">
+
+        <section *ngSwitchCase="1">
+
+            <!-- <div class="input-container" style="width: 100%;">
+                <label for="nomre">Perfil *</label>
+                <select [(ngModel)]="data.current.id_tipo_usuario">
+                    <option [value]="tema.value" *ngFor="let tema of perfiles">{{ tema.label }}</option>
+                </select>
+            </div> -->
+
+            <div class="input-container" style="width: 100%;">
+                <label for="nomre">Nombre *</label>
+                <input type="text" id="nombre" [(ngModel)]="data.current.descripcion" placeholder="University of US">
+            </div>
+
+            <div class="input-container" style="width: 100%;">
+                <label for="nomre">Correo *</label>
+                <input type="text" id="nombre" [(ngModel)]="data.current.nombre" placeholder="uah.edu">
+            </div>
+
+            <div class="input-container" style="width: 100%;">
+                <label for="nomre">Imagen</label>
+                <label for="filere" class="ctn-img">
+                    <img src="assets/imgs/noAvail.jpeg" alt=""
+                        *ngIf="!data.current.url && data.current.b64.length == 0">
+                    <img [src]="data.current.url" alt="" *ngIf="data.current.url && data.current.b64.length == 0">
+                    <img [src]="data.current.b64" alt="" *ngIf="!data.current.url && data.current.b64.length > 0">
+                </label>
+                <input type="file" id="filere" style="visibility: hidden;padding: 0;height: 0px;"
+                    (change)="changeImg($event)">
+            </div>
+        </section>
+
+        <section *ngSwitchCase="2">
+
+            <!-- <div class="input-container" style="width: 100%;">
+                <label for="nomre">Perfil *</label>
+                <select [(ngModel)]="data.current.id_tipo_usuario">
+                    <option [value]="tema.value" *ngFor="let tema of perfiles">{{ tema.label }}</option>
+                </select>
+            </div> -->
+
+            <div class="input-container" style="width: 100%;">
+                <label for="nomre">Nombre *</label>
+                <input type="text" id="nombre" [(ngModel)]="data.current.nombre" placeholder="Root">
+            </div>
+
+            <div class="input-container" style="width: 100%;">
+                <label for="nomre">Descripción del rol *</label>
+                <input type="text" id="nombre" [(ngModel)]="data.current.descripcion" placeholder="Superusuario">
+            </div>
+        </section>
+
+        <section *ngSwitchCase="3">
+
+            <!-- <div class="input-container" style="width: 100%;">
+                <label for="nomre">Perfil *</label>
+                <select [(ngModel)]="data.current.id_tipo_usuario">
+                    <option [value]="tema.value" *ngFor="let tema of perfiles">{{ tema.label }}</option>
+                </select>
+            </div> -->
+
+            <div class="input-container" style="width: 100%;">
+                <label for="nomre">Nombre</label>
+                <p class="names">{{data.usuario.nombre}} {{data.usuario.apellidos}}</p>
+            </div>
+
+            <div class="input-container" style="width: 100%;">
+                <label for="nomre">Username</label>
+                <p class="names">{{data.usuario.username}}</p>
+            </div>
+
+            <section *ngIf="data.usuario.penalizaciones_json && data.usuario.penalizaciones_json.length > 0">
+                <section>
+                    <table>
+                        <caption>Penalizaciones</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Motivo</th>
+                                <th scope="col">Reuniones</th>
+                                <th scope="col">Término</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+
+                        <tbody *ngIf="data.usuario.penalizaciones_json && data.usuario.penalizaciones_json.length > 0">
+
+                            <tr *ngFor="let p of data.usuario.penalizaciones_json; let i = index">
+                                <td data-label="Fecha">{{ p.fecha_penalizado }} </td>
+                                <td data-label="Motivo">{{ p.razon }} </td>
+                                <td data-label="Reuniones">{{ p.reuniones }} </td>
+                                <td data-label="Término">{{ p.levantamiento }} </td>
+                                <td data-label="Eliminar" style="cursor: pointer;" (click)="deleteP(p,i)">
+                                    <span class="material-icons-outlined">
+                                        delete
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+        </section>
+    </section>
+
+
+    <div class="btn-end" *ngIf="data.id != 3">
+        <button (click)="add()">{{ data.status ? 'Actualizar' : 'Agregar' }}</button>
+    </div>
+
+    <div class="btn-end" *ngIf="data.id == 3">
+        <button (click)="save()">Guardar</button>
+    </div>
+</section>

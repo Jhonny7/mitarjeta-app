@@ -1,0 +1,45 @@
+<section class="lgn">
+  <section class="cmpt-login animated bounceIn" id="btn-scroll">
+    <div class="img-container">
+      <!-- <img src="assets/imgs/login/login.png" alt=""> -->
+      <img src="assets/imgs/connectandemLogo.png" alt="">
+    </div>
+
+
+    <section class="input-login">
+      <div class="input-format">
+        <input [(ngModel)]="data.email.value" type="text" id="input-mail" placeholder="Login"
+          [ngClass]="{'error': data.email.error}">
+      </div>
+
+      <div class="input-format-dual">
+        <input [(ngModel)]="data.pass.value" type="password" id="input-pass3" placeholder="Contraseña"
+          [ngClass]="{'error': data.pass.error}">
+        <div class="icon-input" (touchend)="change()" (touchstart)="change()">
+          <ion-icon name={{eye_icon}} style="stroke: red;" class="inc"></ion-icon>
+        </div>
+      </div>
+
+      <div class="btn-ind">
+        <button (click)="login()">Conecta</button>
+      </div>
+      <p (click)="recuperar()" class="olvidado">{{'login.remember' | translate}}</p>
+
+      <div class="o"><div class="lineas">o</div></div>
+
+      <p (click)="router.navigateByUrl('/register/0')" class="no-registrado">{{'login.yet' | translate}} <strong>{{'login.register-here' | translate}}</strong></p>
+
+      <div (click)="terms()" class="terminos">{{'login.terms' | translate}}</div>
+
+      <!-- <div class="btn-dual">
+        <button (click)="signIn()">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </button>
+  
+        <button (click)="loginGoogle()">
+          <ion-icon name="logo-google"></ion-icon>
+        </button>
+      </div> -->
+    </section>
+  </section>
+</section>

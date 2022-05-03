@@ -1,0 +1,113 @@
+<ng-container [ngSwitch]="inputType">
+
+  <div *ngSwitchCase="'select'">
+
+    <select class="input-select" [ngModel]="tandemModel" (ngModelChange)="tandemModelChange.emit($event)"
+      *ngIf="!multipler && !selectWithImg && !withAutocomplete" [class]="extraClass"
+      (change)="this.changeNormalSelect.emit($event);">
+      <option *ngFor="let val of values" [value]="val.value">{{ val.label | translate }}</option>
+    </select>
+
+    <mat-select class="input-select" [ngModel]="tandemModel" (ngModelChange)="tandemModelChange.emit($event)"
+      *ngIf="!multipler && selectWithImg && !withAutocomplete" [class]="extraClass">
+      <mat-option *ngFor="let val of values" [value]="val.value">
+        <div class="enimg" *ngIf="selectWithImg">
+          <img with="20" height="20" [src]="val.url" *ngIf="val.url">
+          <img with="20" height="20" src="assets/imgs/noAvail.jpeg" *ngIf="!val.url">
+        </div>
+        {{val.label}}
+      </mat-option>
+    </mat-select>
+
+    <mat-form-field *ngIf="multipler && !withAutocomplete" [class]="extraClass">
+      <mat-select placeholder="{{inputPlaceholder | translate}}">
+        <mat-option *ngFor="let topping of values; let i =index" [value]="topping" (click)="onChange(topping)">
+          <div class="checked">
+            <div *ngIf="topping.checked" class="y-check">
+
+            </div>
+            <div *ngIf="!topping.checked" class="n-check">
+
+            </div>
+          </div>
+          {{topping.label}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <section *ngIf="showSelection && seleccion">
+      <div>
+        <div *ngFor="let o of seleccion">
+          {{o.value}}
+        </div>
+      </div>
+    </section>
+
+    <mat-form-field [class]="extraClass" *ngIf="withAutocomplete">
+
+      <input type="text" placeholder="{{inputPlaceholder | translate}}" matInput [formControl]="formControl"
+        [matAutocomplete]="auto" [ngModel]="tandemModel">
+
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-option *ngFor="let item of autoFilter | async" [value]="item.label">
+          <div class="enimg" *ngIf="selectWithImg">
+            <img with="20" height="20" [src]="item.url" *ngIf="item.url">
+            <img with="20" height="20" src="assets/imgs/noAvail.jpeg" *ngIf="!item.url">
+          </div>
+          {{item.label}}
+        </mat-option>
+      </mat-autocomplete>
+
+    </mat-form-field>
+
+  </div>
+
+  <div *ngSwitchCase="'textarea'">
+    <textarea name="" id="" cols="30" rows="3" class="input-tandem" [ngModel]="tandemModel"
+      (ngModelChange)="tandemModelChange.emit($event)" placeholder="{{inputPlaceholder | translate}}"
+      [maxlength]="inputMaxLength" [class]="extraClass"></textarea>
+  </div>
+
+  <div *ngSwitchCase="'date'">
+    <ion-item class="dates" [class]="extraClass">
+      <ion-label>{{inputPlaceholder | translate}}</ion-label>
+      <ion-datetime (ionChange)="dateChange.emit($event)" [ngModel]="tandemModel" [min]="minDate"
+        (ngModelChange)="tandemModelChange.emit($event)" placeholder="{{inputPlaceholder | translate}}">
+      </ion-datetime>
+
+    </ion-item>
+  </div>
+
+  <div *ngSwitchCase="'hour'">
+    <!-- <p style="color: black;">Houuuuuur</p> -->
+    <ion-item class="dates" [class]="extraClass">
+      <ion-label>{{inputPlaceholder | translate}}</ion-label>
+      <ion-datetime (ionChange)="dateChange.emit($event)" [ngModel]="tandemModel" display-format="h:mm A"
+        picker-format="h:mm A" (ngModelChange)="tandemModelChange.emit($event)"
+        placeholder="{{inputPlaceholder | translate}}">
+      </ion-datetime>
+
+    </ion-item>
+  </div>
+
+  <div *ngSwitchCase="'check'">
+    <label class="container" (click)="checkChange.emit($event)">{{inputPlaceholder | translate}}
+      <input type="checkbox" [ngModel]="tandemModel" (ngModelChange)="tandemModelChange.emit($event)">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+
+  <div *ngSwitchDefault>
+    <input [type]="inputType" class="input-tandem" [ngModel]="tandemModel" [class]="extraClass"
+      (ngModelChange)="tandemModelChange.emit($event)" placeholder="{{inputPlaceholder | translate}}" [maxlength]="inputMaxLength"
+      *ngIf="inputType != 'select' && !float">
+
+    <div class="input-group" *ngIf="float">
+      <input [type]="inputType" [ngModel]="tandemModel" (ngModelChange)="tandemModelChange.emit($event)"
+        [maxlength]="inputMaxLength" class="floating" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label> {{inputPlaceholder | translate}} </label>
+    </div>
+  </div>
+</ng-container>

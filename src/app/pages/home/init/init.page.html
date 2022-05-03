@@ -1,0 +1,18 @@
+<olam-header title="{{'home.init' | translate}}" [backActive]="false"></olam-header>
+
+<container-app>
+  <section class="opcion-route" *ngFor="let item of secciones" [style.background-color]="themeService.getColorHex()"
+    (click)="go(item)">
+    <span class="material-icons-outlined">
+      {{ item.icon }}
+    </span>
+    <p>{{ item.title | translate }}</p>
+  </section>
+
+  <section class="opcion-route" style="background-color: transparent;">
+    <span class="material-icons-outlined">
+
+    </span>
+    <p></p>
+  </section>
+</container-app>

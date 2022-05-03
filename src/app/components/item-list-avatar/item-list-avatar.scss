@@ -1,0 +1,57 @@
+.item-list {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 10px;
+  cursor: pointer;
+  .avatar {
+    .text-r {
+      text-align: center;
+      width: 45px;
+      height: 45px;
+      background-color: #5d8dd4;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      padding: 2px 0px 0px 0px;
+      display: inline-block;
+      vertical-align: middle;
+      p {
+        margin: 0;
+      }
+
+      p:nth-child(2) {
+        margin-top: -8px;
+      }
+    }
+
+    .textuales {
+      display: inline-block;
+      width: calc(100% - 55px);
+      margin-left: 5px;
+      padding-left: 15px;
+      vertical-align: middle;
+      text-align: justify;
+      p {
+        margin: 0;
+        color: #322f3c;
+        font-size: 16px;
+      }
+
+      p:nth-child(2) {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.inactive{
+  .text-r {
+    background-color: #f93a00 !important;
+  }
+}
+
+.hecha{
+  .text-r {
+    background-color: #0e1a2b !important;
+  }
+}

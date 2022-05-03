@@ -1,0 +1,14 @@
+<section class="item-list">
+  <div class="avatar" [class.inactive]="data.id_status_reunion == 261"
+  [class.hecha]="data.id_status_reunion == 263">
+    <div class="text-r">
+      <p>{{data.dia}}</p>
+      <p>{{data.mes}}</p>
+    </div>
+
+    <div class="textuales">
+      <p>{{ removeId(data.room) }}</p>
+      <p>{{"from" | translate}} {{data.horaIni}} {{"to" | translate}} {{data.horaFin}}</p>
+    </div>
+  </div>
+</section>

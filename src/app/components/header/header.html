@@ -1,0 +1,13 @@
+<header class="olam-header" [style]="{'background-color': themeService.getThemeData().background}">
+    <div class="back-button" *ngIf="!isModal && backActive">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+    </div>
+    <div class="search-button" *ngIf="!isModal" (click)="openConfiguration()">
+        <ion-icon name="cog-outline"></ion-icon>
+    </div>
+
+    <div class="search-button" *ngIf="isModal" (click)="close()">
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+    <p class="title">{{title}}</p>
+</header>

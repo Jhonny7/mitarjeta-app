@@ -1,0 +1,7 @@
+
+
+  <section class="container-page ion-page" #containerPage [style]="{'background-color': themeService.getThemeData().background}">
+    <ng-template adHost></ng-template>
+  </section>
+
+  <tabs [tabs]="tabs" (tabSelect)="tabSelect($event)"></tabs>

@@ -1,0 +1,58 @@
+.opciones {
+    //padding: 10px;
+    p {
+        margin: 0;
+    }
+
+    .option-pane {
+        padding: 5px;
+        border: 1px solid #e5e5e5;
+        margin-bottom: 5px;
+        //text-align: center;
+        ion-icon {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        p {
+            display: inline-block;
+        }
+    }
+
+    .title {
+        //text-align: center;
+        color: #006480;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        color: #f2f2f2;
+    }
+
+    .themes {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        .theme {
+            display: inline-block;
+            width: 16%;
+            vertical-align: middle;
+
+            .around {
+                width: 45px;
+                height: 45px;
+                margin: auto;
+                border-radius: 50%;
+                border: 1px solid #fff;
+            }
+        }
+    }
+}
+
+.closed {
+    margin-top: 20px;
+    p {
+        text-align: center;
+        cursor: pointer;
+    }
+}

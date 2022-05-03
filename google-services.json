@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "593034954576",
+    "project_id": "connectandem",
+    "storage_bucket": "connectandem.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593034954576:android:8477ca3279425e5ba10e55",
+        "android_client_info": {
+          "package_name": "mx.com.sarreapps.mitarjeta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593034954576-f9lus07es5aaoo9mv83b8sk7acqfdpam.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsscZoUEZ3rKyhUi29p1_OQsBb8wnp9ZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593034954576-f9lus07es5aaoo9mv83b8sk7acqfdpam.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
