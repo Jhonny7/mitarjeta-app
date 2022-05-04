@@ -1,5 +1,6 @@
+import { ThemeService } from 'src/app/services/theme.service';
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 import { Diagnostic } from '@ionic-native/diagnostic/ngx';
@@ -18,38 +19,39 @@ import { SqlGenericService } from './services/sqlGenericService';
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
+  //encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit {
 
   public menus: any[] = [{
     path: "sabias",
-    icon: "assets/imgs/home/sabias.png",
+    icon: "assets/imgs/cards/admin.png",
     id: 0,
-    name: "Sabías que"
+    name: "Administración"
   }, {
     path: "trivia",
-    icon: "assets/imgs/home/trivia.png",
+    icon: "assets/imgs/cards/search.png",
     id: 1,
     notNeedSubject: true,
-    name: "Trivia"
+    name: "Glosario"
   }, {
     path: "capsula",
-    icon: "assets/imgs/home/capsula.png",
+    icon: "assets/imgs/cards/pay.png",
     //isTab: true,
     id: 2,
-    name: "Cápsula informativa"
+    name: "Precios"
   }, {
     path: "directorio",
-    icon: "assets/imgs/home/directorio.png",
+    icon: "assets/imgs/cards/faqs.png",
     id: 3,
     notNeedSubject: true,
-    name: "Directorio"
+    name: "Preguntas"
   }, {
     path: "preguntas",
-    icon: "assets/imgs/home/faqs.png",
+    icon: "assets/imgs/cards/about.png",
     //isTab: true,
     id: 4,
-    name: "Preguntas frecuentes"
+    name: "Acerca de"
   },
   ];
 
@@ -68,13 +70,11 @@ export class AppComponent implements OnInit {
     private eventService: EventService,
     private statusBar: StatusBar,
     private headerColor: HeaderColor,
-    private diagnostic: Diagnostic
+    private diagnostic: Diagnostic,
+    public themeService: ThemeService
   ) {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-    if (!this.localStorageEncryptService.getFromLocalStorage("theme")) {
-      this.localStorageEncryptService.setToLocalStorage("theme", "#FFFFFF");
-      this.localStorageEncryptService.setToLocalStorage("themeClass", "primary2");
-    }
+    
     this.user = this.localStorageEncryptService.getFromLocalStorage("userSessionConnectandem");
 
     if (remastered) {
@@ -207,9 +207,9 @@ export class AppComponent implements OnInit {
   cargarTema() {
     let t: any = this.localStorageEncryptService.getFromLocalStorage("theme");
     if (!t) {
-      this.localStorageEncryptService.setToLocalStorage("theme", "#FFFFFF");
+      /* this.localStorageEncryptService.setToLocalStorage("theme", "#FFFFFF");
       this.localStorageEncryptService.setToLocalStorage("color-font", "#fff");
-      this.localStorageEncryptService.setToLocalStorage("themeClass", "primary");
+      this.localStorageEncryptService.setToLocalStorage("themeClass", "primary"); */
       //this.localStorageEncryptService.setToLocalStorage("primary", "#232323");
     }
   }

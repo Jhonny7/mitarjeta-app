@@ -40,33 +40,58 @@ export const firebaseConfig = {
 
 export const themeData = {
   blue: {
-    background: "#051a3c",
+    background: "#154d5e",
     color: "#f2f2f2",
+    disabledColor: "#ddd4d4",
+    enabledColor: "#ffffff",
+    component: "#82a4a0",
     alert_class: "theme1",
+    componentColor: "#f2f2f2",
   },
   green: {
-    background: "#104f26",
+    background: "#313251",
     color: "#f2f2f2",
+    disabledColor: "#ddd4d4",
+    enabledColor: "#ffffff",
+    component: "#2a3f85",
     alert_class: "theme2",
+    componentColor: "#f2f2f2",
   },
   red:{
-    background: "#711b12",
+    background: "#0e3f71",
     color: "#f2f2f2",
+    disabledColor: "#ddd4d4",
+    enabledColor: "#ffffff",
+    component: "#2a589e",
     alert_class: "theme3",
+    componentColor: "#f2f2f2",
   },
   purple:{
     background: "#530751",
     color: "#f2f2f2",
+    disabledColor: "#ddd4d4",
+    enabledColor: "#ffffff",
+    component: "#82a4a0",
     alert_class: "theme4",
+    componentColor: "#f2f2f2",
   },
   pink:{
-    background: "#a42069",
-    color: "#f2f2f2",
+    background: "#FFFFFF",
+    color: "#454545",
+    disabledColor: "#ddd4d4",
+    enabledColor: "#ffffff",
+    component: "#3500ad",
+    componentColor: "#FFFFFF",
     alert_class: "theme5",
   },
   black:{
     background: "#151414",
     color: "#f2f2f2",
+    disabledColor: "#ddd4d4",
+    enabledColor: "#ffffff",
+    component: "#454545",
     alert_class: "theme6",
+    componentColor: "#f2f2f2",
+    
   }
 }

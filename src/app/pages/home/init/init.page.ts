@@ -152,7 +152,7 @@ export class InitPage implements OnInit, OnDestroy {
     private navCtrl: NavController
   ) {
 
-    this.menu.enable(true);
+    //this.menu.enable(true);
     //console.log("------------------------tab 1---------------------");
     if (remastered) {
       this.secciones.push({
@@ -182,7 +182,7 @@ export class InitPage implements OnInit, OnDestroy {
   }
 
   getUserUpdate() {
-    let sql: string = `SELECT * FROM usuario WHERE id = ${this.user.id}`;
+    let sql: string = `SELECT * FROM usuario WHERE id = ${this.user?.id}`;
     this.sqlGenericService.excecuteQueryStringReference(sql, "updateUserStorage").subscribe((response: any) => {
       this.user = response.parameters[0];
       localStorage.setItem("userSessionConnectandem", JSON.stringify(this.user));
@@ -224,7 +224,7 @@ export class InitPage implements OnInit, OnDestroy {
     //this.router.navigate([itm.path]);
     //this.navCtrl.navigateForward(itm.path);
 
-    this.alertService.successAlert("jemplo", "Ejemplor", () => {
+    this.alertService.confirmWithButtons("Ejemplor", () => {
 
     })
   }

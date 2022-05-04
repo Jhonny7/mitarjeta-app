@@ -1,4 +1,5 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'olam-button',
@@ -13,6 +14,7 @@ export class OlamButtonComponent implements OnDestroy, OnInit {
 
 
   constructor(
+    public themeService: ThemeService
   ) {
   }
 

@@ -103,3 +103,10 @@ ion-menu {
 .olam-app{
     
 }
+
+.my-custom-menu {
+    border-radius: 0px 20px 20px 0px;
+    .menu-inner{
+        border-radius: 0px 20px 20px 0px;
+    }
+}

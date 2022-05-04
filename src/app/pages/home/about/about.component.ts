@@ -22,7 +22,7 @@ export class AboutComponent implements OnInit {
     private menu: MenuController,
     private navParams: NavParams,
   ) {
-    this.menu.enable(false);
+    this.menu.enable(true);
     try {
       this.terms = this.navParams.get("terms");
     } catch (error) {

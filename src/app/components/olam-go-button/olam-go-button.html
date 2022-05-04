@@ -1,0 +1,11 @@
+<button class="tnd-btn" [class]="extraClass" (click)="onTap ? onTap : ''" 
+[style]="{'background-color': themeService.getThemeData().component}">
+  <div class="txt" [style.color]="themeService.getThemeData().componentColor">
+    <ng-content>
+
+    </ng-content>
+  </div>
+  <div class="go-icon" [style.border-color]="themeService.getThemeData().componentColor">
+    <ion-icon name="chevron-forward-outline" [style.color]="themeService.getThemeData().componentColor"></ion-icon>
+  </div>
+</button>

@@ -47,6 +47,8 @@ export class ThemeService {
 
     getThemeData(){
         let color: any = this.localStorageEncryptService.getFromLocalStorage("theme");
+        //console.log(color);
+        
         if(!color){
             color = "blue";
         }

@@ -31,6 +31,7 @@ import { MapsComponent } from './components/maps/maps.component';
 import { InputTandemComponent } from './components/input-tandem/input-tandem';
 import { OlamButtonComponent } from './components/olam-button/olam-button';
 import { GalleryUrlComponent } from './components/gallery-url/gallery.component';
+import { OlamGoButtonComponent } from './components/olam-go-button/olam-go-button';
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, '../assets/i18n/', '.json');
 }
@@ -61,6 +62,7 @@ export function createTranslateLoader(http: HttpClient) {
         InputTandemComponent,
         OlamButtonComponent,
         GalleryUrlComponent,
+        OlamGoButtonComponent
     ],
     exports: [
         SpinnerOverlayComponent,
@@ -87,6 +89,7 @@ export function createTranslateLoader(http: HttpClient) {
         InputTandemComponent,
         OlamButtonComponent,
         GalleryUrlComponent,
+        OlamGoButtonComponent
     ],
     imports: [
         CommonModule,

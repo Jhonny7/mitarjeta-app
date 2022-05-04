@@ -23,12 +23,12 @@ const routes: Routes = [
   {
     path: 'inicio',
     component: TabsPage,
-    canActivate: [AuthGuard],
+    //canActivate: [AuthGuard],
   },
   {
     path: 'about',
     component: AboutComponent,
-    canActivate: [AuthGuard]
+    //canActivate: [AuthGuard]
   }, {
     path: 'login',
     component: LoginComponent

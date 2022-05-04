@@ -14,7 +14,7 @@ export class AlertService {
     private location: PlatformLocation,
     private translateService: TranslateService,
     public themeService: ThemeService
-    ) {
+  ) {
     location.onPopState(() => {
       swal.close();
     });
@@ -22,14 +22,14 @@ export class AlertService {
 
   customizeAlert(data: any, accion: any = null, cancelAction: any = null) {
     swal.fire(data).then(result => {
-     //console.log(result);
-      
+      //console.log(result);
+
       if (result.isConfirmed) {
         if (accion) {
           accion();
         }
-      }else{
-        if(cancelAction){
+      } else {
+        if (cancelAction) {
           cancelAction();
         }
       }
@@ -108,6 +108,48 @@ export class AlertService {
     });
   }
 
+  bottomModals(titulo: string, mensaje: string, accion: any = null, cssClass: string = "olam-alert") {
+    let dataAlert: any = {
+      type: null,
+      title: null,
+      text: null,
+      confirmButtonText: this.translateService.instant("alerts.accept"),
+      showCancelButton: false,
+      showCloseButton: true,
+      allowOutsideClick: true,
+      customClass: `${cssClass} ${this.themeService.getThemeData().alert_class}`,
+      showClass: {
+        popup: 'animated bounceInUp'
+      },
+      hideClass: {
+        popup: 'animated bounceOutDown'
+      }
+    };
+
+    dataAlert.html = `
+          
+          <div class="contenedor-imagen success-a"> 
+          </div>
+    
+          <div class="mensaje">
+            <p>${titulo}</p>
+          </div>
+    
+          <div class="descripcion">
+            <p>${mensaje}</p>
+          </div>
+          `;
+    dataAlert.funcion = () => { };
+
+    swal.fire(dataAlert).then(result => {
+      if (result.value) {
+        if (accion) {
+          accion();
+        }
+      }
+    });
+  }
+
   successAlert(titulo: string, mensaje: string, accion: any = null, cssClass: string = "olam-alert") {
     let dataAlert: any = {
       type: null,
@@ -137,6 +179,40 @@ export class AlertService {
     
           <div class="descripcion">
             <p>${mensaje}</p>
+          </div>
+          `;
+    dataAlert.funcion = () => { };
+
+    swal.fire(dataAlert).then(result => {
+      if (result.value) {
+        if (accion) {
+          accion();
+        }
+      }
+    });
+  }
+
+  confirmWithButtons(titulo: string, accion: any = null, accionCancel: any = null, cssClass: string = "olam-alert") {
+    let dataAlert: any = {
+      type: null,
+      title: null,
+      text: null,
+      confirmButtonText: this.translateService.instant("alerts.accept"),
+      showCancelButton: false,
+      showCloseButton: true,
+      allowOutsideClick: true,
+      customClass: `${cssClass} ${this.themeService.getThemeData().alert_class}`,
+      showClass: {
+        popup: 'animated bounceInUp'
+      },
+      hideClass: {
+        popup: 'animated bounceOutDown'
+      }
+    };
+
+    dataAlert.html = `
+          <div class="mensaje">
+            <p>${titulo}</p>
           </div>
           `;
     dataAlert.funcion = () => { };
@@ -226,14 +302,14 @@ export class AlertService {
 
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         let isEmail = re.test(String(valor.value).toLowerCase());
-        if(isEmail){
+        if (isEmail) {
           valor.style.border = "1px solid #cacaca";
           return true;
-        }else{
+        } else {
           valor.style.border = "1px solid #ec0000";
           return false;
         }
-        
+
       }
     }
     swal.fire(dataAlert).then(result => {
@@ -246,7 +322,7 @@ export class AlertService {
     });
   }
 
-  custom(html:string) {
+  custom(html: string) {
     let dataAlert: any = {
       type: null,
       title: null,
@@ -261,7 +337,7 @@ export class AlertService {
     dataAlert.funcion = () => { };
 
     swal.fire(dataAlert).then(result => {
-      
+
     });
   }
 

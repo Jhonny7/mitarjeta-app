@@ -1,5 +1,7 @@
-<button class="tnd-btn" [class]="extraClass" (click)="onTap ? onTap : ''">
-  <ng-content>
+<button class="tnd-btn" [class]="extraClass" (click)="onTap ? onTap : ''"
+[style.color]="themeService.getThemeData().componentColor"
+[style.background-color]="themeService.getThemeData().component">
+  <ng-content >
     
   </ng-content>
 </button>

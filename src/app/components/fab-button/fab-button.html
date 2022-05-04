@@ -1,5 +1,7 @@
-<button [class]="extraClass" class="fab" [style.background-color]="themeService.getColorHex()">
-  <ng-content>
-    
+<button class="fab" [class]="extraClass" [style.background-color]="themeService.getThemeData().component"
+[style.color]="themeService.getThemeData().componentColor"
+[style.brder-color]="themeService.getThemeData().componentColor">
+  <ng-content >
+
   </ng-content>
 </button>

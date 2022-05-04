@@ -1,21 +1,20 @@
-<!-- <ion-menu side="start" contentId="main" *ngIf="user">
-  <section class="header-menu">
-    <img class="img-header" src="assets/imgs/login/fondoSham.png" alt="">
+<ion-menu side="start" contentId="mainContent" class="my-custom-menu">
+  <section class="header-menu" [style.background-color]="themeService.getThemeData().background">
+    <img class="img-header" src="assets/imgs/cards/menubanner.png" alt="">
 
     <section class="user">
-      <img src="assets/imgs/logo-sup.png" alt="" class="img-logo">
+      <img src="assets/imgs/cards/logo.png" alt="" class="img-logo">
 
       <div class="user-data">
-        <p>{{ user.nombre }} {{ user.apellido_paterno }}</p>
-        <p>{{ user.username }}</p>
+        <p>{{ user?.nombre }} {{ user?.apellido_paterno }}</p>
+        <p>{{ user?.username }}</p>
       </div>
     </section>
 
   </section>
 
   <section class="item-list">
-    <div *ngFor="let item of menus" class="itm"
-    [class]="{ 'active-menu': item.active  }" (click)="openPage(item)">
+    <div *ngFor="let item of menus" class="itm" [class]="{ 'active-menu': item.active  }" (click)="openPage(item)">
       <ul class="father">
         <li class="father-li">
           <img [src]="item.icon" alt="">
@@ -25,12 +24,12 @@
     </div>
   </section>
 
-  <section>
-    <button class="close-sesion" (click)="close()">Cerrar sesión</button>
+  <section style="padding: 0 16px 10px 16px;background-color: #fff;">
+    <olam-button>Cerrar sesión</olam-button>
   </section>
-</ion-menu> -->
+</ion-menu>
 
 <section class="olam-app">
- <!--  <ion-router-outlet id="main" swipeBackEnabled="false"></ion-router-outlet> -->
- <ion-router-outlet id="main" ></ion-router-outlet>
+  <!--  <ion-router-outlet id="main" swipeBackEnabled="false"></ion-router-outlet> -->
+  <ion-router-outlet id="mainContent" swipeBackEnabled="false"></ion-router-outlet>
 </section>

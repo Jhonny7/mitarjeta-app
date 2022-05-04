@@ -1,11 +1,11 @@
-<section class="tabbs" [style]="{'background-color': themeService.getThemeData().background}"
+<section class="tabbs" [style]="{'background-color': themeService.getThemeData().component}"
 [style.color]="genericService.getColorFont()">
   <div class="tab-ind" *ngFor="let tab of tabs" [style]="{ 'width': percent + '%' }" 
   [class]="tabConfig?.extraClass" >
     <section class="no-active" (click)="renderComponent(tab)" [class]="{ 'activo' : tab.active }">
       <ion-icon [name]="tab.active ? tab.icon : tab.icon + '-outline'"
-      [ngStyle]="{'color': tab.active ? '#fff' : '#d6d6d6'}"></ion-icon>
-      <p [ngStyle]="{'color': tab.active ? '#fff' : '#d6d6d6'}">{{tab.title | translate}}</p>
+      [ngStyle]="{'color': tab.active ? themeService.getThemeData().enabledColor : themeService.getThemeData().disabledColor}" ></ion-icon>
+      <p [ngStyle]="{'color': tab.active ? themeService.getThemeData().enabledColor : themeService.getThemeData().disabledColor}">{{tab.title | translate}}</p>
     </section>
   </div>
 </section> 
